@@ -13,7 +13,12 @@ const TenantSchema = mongoose.Schema({
     status:{
         type:String,
         enum:['Active','Pending'],
+        default:'Pending',
         required:true
+    },
+    meterNumber:{
+        type:String,
+        default: null
     }
 
 })

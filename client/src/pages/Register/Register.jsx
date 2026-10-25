@@ -46,7 +46,7 @@ function Register() {
                     <p className="text-gray-500 text-sm">Create your tenant account</p>
                 </div>
 
-                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm px-8 py-8">
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm px-4 sm:px-8 py-8">
                     <h2 className="text-xl font-semibold text-gray-800 mb-6">Tenant Registration</h2>
 
                     <form onSubmit={handleSubmit} className="space-y-4">

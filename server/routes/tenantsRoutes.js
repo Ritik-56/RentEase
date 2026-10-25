@@ -1,9 +1,13 @@
 import express from 'express';
-import acceptTenant from '../controllers/tenantController.js'
+import tenantController from '../controllers/tenantController.js';
+import authMiddleware from '../middleware/authMiddleware.js';
 
-const router = express.Router();
+const tenantrouter = express.Router();
+ 
+// GET all tenants (with user info + status)
+tenantrouter.get('/tenants',authMiddleware,tenantController.getTenants);
 
+// PATCH to accept a pending tenant
+tenantrouter.patch('/tenants/:tenantId/accept', tenantController.acceptTenant);
 
-router.patch('/:tenantId/accept', acceptTenant);
-
-router.post('/tenants',getTenants);
+export default tenantrouter;

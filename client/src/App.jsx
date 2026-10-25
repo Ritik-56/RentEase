@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Admin from "./pages/Admin/Admin";
 import Tenants from "./pages/Tenants/Tenants";
 import Meters from "./pages/Meters/Meters";
+import Transactions from "./pages/Transactions/Transactions";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/tenants" element={<Tenants />} />
                 <Route path="/meters" element={<Meters />} />
+                <Route path="/transactions" element={<Transactions />} />
             </Routes>
         </BrowserRouter>
     );
